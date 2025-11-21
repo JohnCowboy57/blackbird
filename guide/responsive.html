@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный пример: адаптивная вёрстка</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!--
+        Блок 1 — шапка сайта.
+        Основная идея: в десктопе элементы стоят в одну линию,
+        а на телефоне становятся колонкой.
+    -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">BLACK BIRD</div>
+            <nav class="nav">
+                <a href="#">Главная</a>
+                <a href="#">Возможности</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <button class="cta">Купить</button>
+        </div>
+    </header>
+
+    <!--
+        Блок 2 — герой с текстом и картинкой.
+        На широком экране текст и картинка стоят рядом.
+        На узком — превращаем в колонку и уменьшаем шрифты.
+    -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Самый безопасный скрипт</h1>
+            <p>
+                Полный контроль отдачи через плату Makcu.<br>
+                Научись управлять блоками с помощью flex и media queries.
+            </p>
+            <div class="hero__buttons">
+                <a class="btn primary" href="#">Приобрести</a>
+                <a class="btn ghost" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="hero__images">
+            <img src="https://via.placeholder.com/360x220/0f0/000?text=Desktop" class="hero__main" alt="Desktop view">
+            <img src="https://via.placeholder.com/260x160/0ff/000?text=Makcu" class="hero__secondary" alt="Makcu board">
+        </div>
+    </section>
+
+    <!--
+        Блок 3 — карточки.
+        Демонстрация сетки, которая из 3 колонок превращается в одну.
+    -->
+    <section class="cards">
+        <article class="card">
+            <h3>ШАГ 1</h3>
+            <p>Задаём базовую сетку (display:flex или grid) для десктопа.</p>
+        </article>
+        <article class="card">
+            <h3>ШАГ 2</h3>
+            <p>Добавляем media query, в котором меняем направление/ширину.</p>
+        </article>
+        <article class="card">
+            <h3>ШАГ 3</h3>
+            <p>Не забываем про размеры шрифтов, отступы, переносы слов.</p>
+        </article>
+    </section>
+
+    <!--
+        Небольшой FAQ с details/summary для практики.
+    -->
+    <section class="faq">
+        <details>
+            <summary>Зачем нужен meta viewport?</summary>
+            <p>Он говорит браузеру телефона не масштабировать страницу, а подстраивать ширину под экран.</p>
+        </details>
+        <details>
+            <summary>Как подобрать breakpoints?</summary>
+            <p>Сначала верстаешь десктоп. Затем уменьшаешь окно и фиксируешь место, где элементы ломаются.</p>
+        </details>
+    </section>
+</body>
+</html>
+
